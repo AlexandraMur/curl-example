@@ -4,7 +4,7 @@
 using namespace std;
 
 size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
-    	return fwrite (ptr, size, nmemb, stream)
+    	return fwrite (ptr, size, nmemb, stream);
 }
 
 int main(void) {
@@ -12,7 +12,7 @@ int main(void) {
 	FILE *fp;
 	CURLcode res;
 
-	char url = "http://wc.exn.su:8888/attachments/download/3/OfForestAndMen.zip";
+	char *url = "http://wc.exn.su:8888/attachments/download/3/OfForestAndMen.zip";
 	//char *url = "http://curl.haxx.se/download/curl-7.20.0.tar.gz";
 	char outfilename[FILENAME_MAX] = "DownloadedFile.zip";
 	curl = curl_easy_init();
